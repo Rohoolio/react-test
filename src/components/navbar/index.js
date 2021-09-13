@@ -5,9 +5,13 @@ import {
     Bars,
     NavMenu
 } from "./NavbarElements";
-import { A } from 'hookrouter';
+import { useRoutes, A } from 'hookrouter';
+import routes from '../../router';
 
 export const Navbar = () => {
+
+const routeResult = useRoutes(routes)
+
   return (
       <>
          <Nav>
@@ -15,13 +19,13 @@ export const Navbar = () => {
               Logo
           </NavLogo>
           <Bars />
-
           <NavMenu>
               <A href="/about">About</A>
               <A href="/contact">Contact</A>
-              <A href="/users">users</A>
+              <A href="/user">Users</A>
           </NavMenu>
          </Nav>
+         {routeResult}
       </>
   );
 };

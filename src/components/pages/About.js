@@ -2,7 +2,9 @@ import React from "react";
 
 export const About = () => {
 
-  console.log('about');
-  return <h1>About Us</h1>;
-
+  return (
+    <div>
+      <h1>Potato potatum you should go for a walk</h1>
+    </div>
+  );
 }
